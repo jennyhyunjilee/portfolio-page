@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>aino.agency — Design &amp; Technology, Scandinavia</title>
+<meta name="description" content="A design and technology agency in Scandinavia. We design and build online stores for fashion and lifestyle brands on Centra and Shopify."/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "outline": "#747878", "surface-container-highest": "#e3e3de", "outline-variant": "#c4c7c7",
+        "surface-bright": "#fafaf5", "primary-fixed-dim": "#c8c6c5", "on-tertiary-container": "#868382",
+        "surface-container-lowest": "#ffffff", "surface-variant": "#e3e3de", "ink-muted": "#767672",
+        "surface-tint": "#5f5e5e", "error-container": "#ffdad6", "on-error-container": "#93000a",
+        "background": "#fafaf5", "secondary-fixed": "#e4e2dd", "surface-bone": "#F5F5F0",
+        "ink-solid": "#181818", "surface-container-low": "#f4f4ef", "primary-container": "#1c1b1b",
+        "tertiary-fixed-dim": "#cac6c4", "tertiary": "#000000", "on-primary": "#ffffff",
+        "border-subtle": "#DCDCD3", "error": "#ba1a1a", "on-surface-variant": "#444748",
+        "inverse-primary": "#c8c6c5", "surface-container": "#eeeee9", "tertiary-container": "#1c1b1a",
+        "border-strong": "#181818", "on-secondary": "#ffffff", "surface-dim": "#dadad5",
+        "inverse-on-surface": "#f1f1ec", "on-tertiary-fixed-variant": "#484645", "on-surface": "#1a1c19",
+        "on-secondary-fixed-variant": "#464744", "primary": "#000000", "tertiary-fixed": "#e6e2df",
+        "on-primary-fixed-variant": "#474746", "ink-dim": "#A4A49C", "on-secondary-container": "#63635f",
+        "on-primary-fixed": "#1c1b1b", "surface-stone-subtle": "#E2E2D9", "secondary-fixed-dim": "#c7c6c2",
+        "primary-fixed": "#e5e2e1", "on-secondary-fixed": "#1b1c19", "on-tertiary-fixed": "#1c1b1a",
+        "surface-stone": "#EAEAE3", "on-tertiary": "#ffffff", "secondary": "#5e5f5b",
+        "surface": "#fafaf5", "secondary-container": "#e1e0db", "surface-container-high": "#e8e8e3",
+        "on-background": "#1a1c19", "on-error": "#ffffff", "on-primary-container": "#858383",
+        "inverse-surface": "#2f312e"
+      },
+      borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+      spacing: {
+        "space-md": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem",
+        "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "4rem", "space-lg": "2rem",
+        "gutter-mobile": "0.75rem"
+      },
+      maxWidth: { "page": "1440px", "content": "1100px", "narrow": "760px" },
+      fontFamily: {
+        "headline-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"],
+        "body-lg": ["Hanken Grotesk"], "mono-code": ["Space Mono"], "caption": ["Space Mono"],
+        "body-sm": ["Hanken Grotesk"], "display-hero": ["Hanken Grotesk"], "label-caps": ["Space Mono"],
+        "headline-md": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "display-hero-mobile": ["Hanken Grotesk"]
+      },
+      fontSize: {
+        "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.035em", "fontWeight": "600" }],
+        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "mono-code": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+        "caption": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "400" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "display-hero": ["72px", { "lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+        "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+        "headline-md": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "500" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+        "display-hero-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+      }
+    }
+  }
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { overscroll-behavior: none; }
+  [id] { scroll-margin-top: 88px; }
+  ::selection { background: #181818; color: #F5F5F0; }
+  .hairline { border-color: #DCDCD3; }
+  #mobile-menu { transition: max-height .3s ease, opacity .2s ease; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md">
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="sticky top-0 z-50 w-full bg-surface border-b hairline">
+  <div class="w-full px-space-md lg:px-space-lg h-14 lg:h-16 flex items-center justify-between gap-space-sm">
+    <a href="#top" class="font-mono-code text-mono-code font-bold tracking-widest uppercase text-ink-solid shrink-0">Aino</a>
+
+    <nav class="hidden lg:flex items-center gap-space-md">
+      <a href="#work" class="font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">Work</a>
+      <a href="#services" class="font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">Services</a>
+    </nav>
+
+    <nav class="hidden lg:flex items-center gap-space-md">
+      <a href="#philosophy" class="font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">About</a>
+      <a href="#estimator" class="font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">Play</a>
+    </nav>
+
+    <a href="#" class="hidden lg:block font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">Settings</a>
+
+    <a href="#contact" class="hidden lg:block font-mono-code text-mono-code uppercase tracking-widest text-ink-solid hover:text-ink-muted transition-colors">Contact</a>
+
+    <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center gap-space-xs text-ink-solid">
+      <span class="font-mono-code text-mono-code uppercase font-bold tracking-widest">Menu</span>
+      <span class="material-symbols-outlined text-[20px]" id="menu-icon">menu</span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden overflow-hidden border-t hairline bg-surface">
+    <nav class="flex flex-col px-margin-mobile py-space-sm">
+      <a href="#work" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid border-b hairline nav-link">Work</a>
+      <a href="#services" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid border-b hairline nav-link">Services</a>
+      <a href="#philosophy" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid border-b hairline nav-link">About</a>
+      <a href="#estimator" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid border-b hairline nav-link">Play</a>
+      <a href="#" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid border-b hairline nav-link">Settings</a>
+      <a href="#contact" class="py-space-sm font-mono-code text-mono-code uppercase tracking-widest text-ink-solid nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="flex flex-col w-full">
+
+  <!-- ============ HERO: full-bleed split imagery ============ -->
+  <section class="flex flex-col w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <!-- Case Item A002: SanDisk -->
+      <a href="#work" class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[88vh] bg-surface-container overflow-hidden group block">
+        <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+             alt="Monolithic industrial design of a matte black portable SSD casing engineered with tactile aerospace ridges, standing upright under stark architectural studio side lighting with subtle warm amber reflections, high fashion editorial lighting, neutral bone background tone."
+             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbT1qlCYTuBBZEdIkJz8jZuz8VVn5EYEBtXcHUWXi9ARy25fAVrSQ8CyP8XDUgHLQ2LNg_mHgtuzQC0Lf1TIJG2UDY_IOciwBUOLFBdQ_g7gNvpwJgqnyzRw7qRX7gremSZFnuFvNoBJAdUhGcT3Iy1I3_bpbRBsvDW6oZBJzpsB9UNuoB5eWcc-g2BmJapSpKoDOrZsQ0ov3g-MhYK3Gv1o7mlrfPa91hHc8Ak7I3EYQkip8VHaZ6"/>
+        <div class="absolute bottom-0 left-0 right-0 p-space-sm flex items-center justify-between text-[10px] font-mono-code uppercase tracking-wider text-surface-bone/80 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span>37° 25' 15" N 121° 55' 19" W</span>
+          <span>SANDISK "START" "REPEAT" RELEASE-00</span>
+        </div>
+      </a>
+
+      <!-- Case Item A004: Samsøe Samsøe -->
+      <a href="#work" class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[88vh] bg-surface-stone overflow-hidden group block">
+        <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+             alt="Editorial lookbook photograph of Scandinavian fashion brand Samsøe Samsøe featuring draped textured wool coat on a contemporary model in a brutalist concrete gallery space with diffused natural Nordic daylight, minimal, sharp and elegant."
+             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS33hQG3pcBb0ULiaYlabde5amDh1DID0yQ4AsvK4QPWNgO35V9lxzUhLbWWiLOKjoGG2AgWErbWaqsFF2diVXcAbXapOepqAmAB5yLKyWVW8E_YmWT1pmihugaQI-lPhbPabq2LKh4cci5rkmkPZrfrXKxr5j5DojmVjK2Z9m_9sW_zT2Z7JfiEvOHxRcWhNv2zokAd0DMDzP-15srcj5B1rS0uNGysaPOghVnXE5DLehdMrDCmtE"/>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-bone">
+    <div class="mx-auto max-w-content w-full flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-md lg:gap-space-lg">
+      <div class="flex flex-col gap-space-md max-w-[640px]">
+        <div class="flex items-center gap-space-xs">
+          <span class="font-mono-code text-caption uppercase text-ink-muted tracking-widest">Agency Mission</span>
+          <span class="font-mono-code text-caption text-ink-dim">// 01</span>
+        </div>
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg font-semibold text-ink-solid tracking-tight">
+          A design and technology agency in Scandinavia. We design and build online stores for fashion and lifestyle brands.
+        </h1>
+      </div>
+      <div class="flex flex-wrap items-center gap-space-sm shrink-0">
+        <a class="min-h-[44px] px-space-lg py-space-sm bg-primary text-on-primary font-mono-code text-mono-code uppercase tracking-wider font-semibold inline-flex items-center justify-center transition-colors hover:bg-secondary" href="#work">
+          All work
+        </a>
+        <a class="min-h-[44px] px-space-lg py-space-sm bg-surface-stone text-ink-solid font-mono-code text-mono-code uppercase tracking-wider font-semibold inline-flex items-center justify-center transition-colors hover:bg-surface-container-highest" href="#services">
+          Our services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ARCHIVE ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-xl gap-space-xl" id="work">
+    <div class="mx-auto max-w-page w-full flex flex-col gap-space-xl">
+
+      <div class="flex items-center justify-between pb-space-xs border-b hairline">
+        <span class="font-label-caps text-label-caps uppercase text-ink-muted tracking-widest">Selected Client Index</span>
+        <span class="font-mono-code text-caption text-ink-dim">11 Studies</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md lg:gap-gutter">
+
+        <!-- A001: Nudie Jeans (featured, spans 2 cols on desktop) -->
+        <article class="flex flex-col w-full group sm:col-span-2 lg:col-span-2">
+          <div class="relative w-full aspect-[16/9] lg:aspect-[21/9] bg-surface-container overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Editorial fashion still of a figure wearing dry selvedge indigo denim jacket and raw jeans standing in an industrial sunlit workshop with soft directional shadows, Scandinavian workshop aesthetic, quiet luxury and craft."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOJVs6rOD7fNQ0D-r0euCD7HKBNJ6xyatwORiZbN-nQv1lw9Wp0e1UI4w7Ybj07Vqgsyio6IQPqg0gaA3E__lxgIFiYcNUHGw9dz2BM64WTE25-QqGKb8nlmCnkvrupACilS3Dei98CiOX4HtKMGqxE8QDG7anu61rYMaF4c9CUmcAwJ66swVivgvpa3XjLEjhGkSIHIiDd7qsxYe5vqDsLeUkrWoeXizF4fO1T-vNZhZKCJaxRx_h"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex flex-col justify-end p-space-md">
+              <div class="bg-surface-bone/95 backdrop-blur-md p-space-sm flex flex-col gap-1 shadow-md max-w-[420px]">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono-code text-mono-code uppercase font-bold text-ink-solid">A001 Nudie Jeans</span>
+                  <span class="font-caption text-caption text-ink-muted">Centra Flagship</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-ink-muted line-clamp-2">
+                  Sustainable denim e-commerce platform re-engineered for global multi-currency scaling and trade-in circularity.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A001 NUDIE JEANS</span>
+            <span class="font-mono-code text-caption text-ink-muted">Gothenburg, SE</span>
+          </div>
+        </article>
+
+        <!-- A020: Emma S -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[4/5] bg-surface-stone overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Clean clinical Scandinavian beauty editorial showcasing elegant frosted glass skincare serums, soft ambient refraction, bone-colored stone tabletop, subtle organic marble textures, pure high-end cosmetics photography."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOTZATIbNHuUGwwqiNJCyBuCva_-vEVDz1qIOVJwdoSjhMyB4RwGDSdA-8yhf3-X3sCuY7_9AjMRIuYJCYlIGb8R8bIk8cNqEbhBFkHwpuXhM23jPFAPK4VSbOLIkyyW_SNd28BiOOoNdMoVbjWUN1PP50coV9MZX685x8cdsqZiIBnK7Euulj8joCJQBZuUZzjgyHN6Be0sbu3_Gf9gHcrYesSmRXGymZX_L9_fiYLV-E4uPcuNBq"/>
+            <div class="absolute top-3 left-3 bg-surface-bone/90 backdrop-blur-md px-2 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold text-ink-solid">A020 EMMA S</span>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 bg-surface-bone/90 backdrop-blur-md px-3 py-2 flex items-center justify-between">
+              <span class="font-mono-code text-caption uppercase text-ink-solid font-medium">Beauty &amp; Skincare</span>
+              <span class="font-label-caps text-label-caps uppercase text-ink-muted">Shopify Accelerator</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A020 EMMA S</span>
+            <span class="font-mono-code text-caption text-ink-muted">Stockholm, SE</span>
+          </div>
+        </article>
+
+        <!-- A007: All Blues -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[1/1] bg-surface-container overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Handcrafted luxury sterling silver sculptural ring resting on polished graphite slab with dramatic high contrast reflection and razor sharp metallic highlights, museum exhibition catalog quality."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOyC4rtJCuFkejaz2TkL9-24MQTkOinNi_VaP52ROEJOchfjQpWRu1YLh_JUyqwxZo3bcnXSJkczu6IElEhBU2S6W0h39iMJyoTdjIEHDw3xucD0oj49gXTUYTVFcDeP_z1RM05tBcYNC9ZFSkfBK6sY8bAvrYDswNmt2fw8ffTeeV1C6alTxJk5r3aNx06DYmA7CgdXdyW8IIFjj55JvFV10laYPzUOVDID6Jck203IzmT97F9IhF"/>
+            <div class="absolute top-3 right-3 bg-primary text-on-primary px-2.5 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold">A007</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A007 ALL BLUES</span>
+            <span class="font-mono-code text-caption text-ink-muted">Fine Jewelry</span>
+          </div>
+        </article>
+
+        <!-- Terminal / ASCII interlude -->
+        <div class="sm:col-span-2 lg:col-span-3 w-full bg-primary-container text-on-primary p-space-md flex flex-col gap-space-xs overflow-hidden">
+          <div class="flex items-center justify-between pb-space-xs">
+            <span class="font-mono-code text-caption uppercase tracking-widest text-ink-dim">Terminal // Shader Pulse</span>
+            <span class="font-mono-code text-caption text-ink-dim">A_NODE.SYS</span>
+          </div>
+          <pre class="font-mono-code text-[9px] leading-[11px] text-surface-container-highest/70 overflow-x-hidden select-none">9A0NNNNOA65Z|:»=•-••:•/»i?29B0ONNNOO8427&lt;
+AI9BONNNNOO 2 :••— * 4Ö§§§§CT &gt;€§2
+ 9B00NNN0A65Z?«•/::..:i/«•?i59BONNNNOA65I?«
+6A0ONNN0A65Z?«•/:...:i/•?i56AONNNNOA65I?&gt;
+6A0ONNN08427«•/:...:i/•i?246A0NNNNOA64I?&gt;
+ 6A0NNN008427«•/:...:i/•i356AONNN008427»
+ 6A0NNNOA653«•/:...:i/•i34800NNNOB927&gt;
+  6ONNN084I&lt;•/...:i/«3480NNNN0657&gt;
+   6ONN0A43•/-:..i•i26ONNOA43»
+     OON083+•..:i•160N06I&gt;
+       8N»
+      Tap to Interact
+      </pre>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-caption uppercase tracking-wider text-surface-container-highest">Crafted with Precision</span>
+            <span class="w-2 h-2 rounded-full bg-surface-bright animate-ping"></span>
+          </div>
+        </div>
+
+        <!-- A014: Socksss -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[4/5] bg-surface-stone overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Surreal high fashion editorial photograph of designer organic cotton graphic socks styled on model feet resting on luxury bed linens, overhead dramatic diagonal cast shadow, playful avant-garde typography framing."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFt0ntYuYLENJ2YvLOTdIUWdXDUqHzIdGlOmV_8vBRmmkVwf65XSdRob07UAaQ4anP2gLssV743hYcp1oefl2Kk-zOUCVUp4_TjPuA9etezN_s2MoeZ2dX4pFlLgS2wN2FFQnkSDIXk83iEEhEfmLTCEK2N7UCAP6Zsh0PFGo1HJNgMFEpBfeON482Oma-eTtGWataM5RgJgQ2tJuAI9BrGwVutPXMleY3Il8RY7z6d1WdGpTlG9PJ"/>
+            <div class="absolute top-3 left-3 bg-surface-bone/90 backdrop-blur-md px-2 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold text-ink-solid">A014 SOCKSSS</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A014 SOCKSSS</span>
+            <span class="font-mono-code text-caption text-ink-muted">Commerce Experience</span>
+          </div>
+        </article>
+
+        <!-- A015: Tinted -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Architectural modern interior scene featuring a sculptural travertine vase on a plush textured wool rug, warm neutral earthy tones, minimalist Scandinavian furniture catalog composition with gentle natural lighting."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWnVV-73316qhZRi_qTW-W_ERtj6vdnqP6UtDxVzV7t7eJGlJk5wFGYQZEtU4LF3ED8ZK9qIqJGb8Sd_9thWBgv9VDkvipFijZ6JqdOD6OEGs9te6wFuZgcTHVk6ah3HOLEJmIzxpGsC0WjW3raC_QDBn5oqU2lQyrzCI6UfHnDuAjECN3dqluDLGrnKPYIwVY7Cl8GiilQQKlxLT5PxozRbqtiuJur-T6OUtRPEJxaVsF5-eMTfjy"/>
+            <div class="absolute top-3 left-3 bg-surface-bone/90 backdrop-blur-md px-2 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold text-ink-solid">A015 TINTED</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A015 TINTED</span>
+            <span class="font-mono-code text-caption text-ink-muted">Home &amp; Living</span>
+          </div>
+        </article>
+
+        <!-- A021: Sweet SKTBS -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[4/5] bg-surface-container-highest overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Grainy black and white action photograph of a street skateboarder caught mid-air over a concrete ramp in an indoor skate facility, raw underground youth culture energy, high contrast monochrome film grain."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIOntu1suePDf7kWGHtwPGQSTDcTc6jJIEKElZpZfQZff9juVwSD4dgmC_Q82215ZlASvGlQ_Opj5q39ugCB5RJh7iEmQgm_YM54_JBVj3iUx1O3np5yP4cWbkFt1iN0ukmygh98hobTejL4e1Cq2LivYKUoK98LVvodMmCFYwC6WnjEz5av4WESqmFznb_oHJ6jB7g7ragdFZIX5fmwXgyFCTfcI6DfC9t197CS3ASV4ARqI54auT"/>
+            <div class="absolute top-3 left-3 bg-primary text-on-primary px-2.5 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold">A021 SWEET SKTBS</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A021 SWEET SKTBS</span>
+            <span class="font-mono-code text-caption text-ink-muted">Streetwear Platform</span>
+          </div>
+        </article>
+
+        <!-- A005: Molo -->
+        <article class="flex flex-col w-full group">
+          <div class="relative w-full aspect-[4/5] bg-surface-stone overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 alt="Editorial fashion portrait of a child wearing a vibrant graphic shearling jacket and knit hat in an artful studio setting, contemporary high-end childrenswear aesthetic, soft clean Nordic backdrop."
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgfcrExaSmaH1jkzurSXRJTjIE4qRG-b7cRRMKHSVUPSEtzPs8CFvQUoZdEBljwT5EWwGDhuLqNbvEZKcb7DNI10WU2AuoDTTgR4Qy5JUaZ31eXay-mZJisTeTFWkyZuqBslvzfkpsSYAZmQy-CuI3FLyAAApOSqjlIdctUsghQnKPslWevd-4OYnoov7nb5MZAKkJnh0_LETIAivFANFAsiw5mR7e6rIHSM94Tie3mLeakQGAntRV"/>
+            <div class="absolute top-3 left-3 bg-surface-bone/90 backdrop-blur-md px-2 py-1">
+              <span class="font-mono-code text-caption uppercase font-bold text-ink-solid">A005 MOLO</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs">
+            <span class="font-mono-code text-mono-code uppercase text-ink-solid font-bold">A005 MOLO</span>
+            <span class="font-mono-code text-caption text-ink-muted">Global Omnichannel</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Compact Secondary Archive Index List -->
+      <div class="flex flex-col w-full bg-surface-bone p-space-md gap-space-sm shadow-sm">
+        <div class="flex items-center justify-between pb-space-xs border-b hairline">
+          <span class="font-label-caps text-label-caps uppercase tracking-wider text-ink-muted">Archive Catalog</span>
+          <span class="font-mono-code text-caption text-ink-dim">[A001—A024]</span>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between py-2 px-2 bg-surface hover:bg-surface-container transition-colors">
+            <div class="flex items-center gap-2">
+              <span class="font-mono-code text-caption text-ink-dim">A010</span>
+              <span class="font-mono-code text-mono-code uppercase font-semibold text-ink-solid">Gulled</span>
+            </div>
+            <span class="font-caption text-caption text-ink-muted">Contract Furniture</span>
+          </div>
+          <div class="flex items-center justify-between py-2 px-2 bg-surface hover:bg-surface-container transition-colors">
+            <div class="flex items-center gap-2">
+              <span class="font-mono-code text-caption text-ink-dim">A011</span>
+              <span class="font-mono-code text-mono-code uppercase font-semibold text-ink-solid">Beyond Medals</span>
+            </div>
+            <span class="font-caption text-caption text-ink-muted">Technical Outerwear</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHILOSOPHY ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-stone" id="philosophy">
+    <div class="mx-auto max-w-content w-full grid grid-cols-1 lg:grid-cols-2 gap-space-lg lg:gap-space-xl items-center">
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-caps text-label-caps uppercase text-ink-muted tracking-widest">// Philosophy &amp; Engineering</span>
+        <p class="font-headline-sm text-headline-sm font-normal text-ink-solid leading-snug">
+          Scandinavian design with engineering underneath, made in Gothenburg, Sweden, and Oslo. We build storefronts on Centra and Shopify, brand identities and campaign sites for clients across Scandinavia, the UK and the US.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-space-sm">
+        <div class="p-space-sm bg-surface-bone flex flex-col gap-1 shadow-sm">
+          <span class="font-mono-code text-caption text-ink-muted uppercase">Architecture</span>
+          <span class="font-headline-sm text-headline-sm font-bold text-ink-solid">Centra + Shopify</span>
+          <span class="font-caption text-caption text-ink-dim">Headless &amp; Liquid</span>
+        </div>
+        <div class="p-space-sm bg-surface-bone flex flex-col gap-1 shadow-sm">
+          <span class="font-mono-code text-caption text-ink-muted uppercase">Presence</span>
+          <span class="font-headline-sm text-headline-sm font-bold text-ink-solid">SE + NO</span>
+          <span class="font-caption text-caption text-ink-dim">Gothenburg &amp; Oslo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-xl gap-space-md" id="services">
+    <div class="mx-auto max-w-page w-full flex flex-col gap-space-md">
+      <div class="flex flex-col gap-1">
+        <span class="font-label-caps text-label-caps uppercase text-ink-muted tracking-widest">Core Capabilities</span>
+        <h2 class="font-headline-sm text-headline-sm lg:font-headline-md lg:text-headline-md font-semibold text-ink-solid">Find out more</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-sm">
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Centra Accelerator</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Centra Agency</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Fashion E-commerce</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Brink Commerce</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Replatforming</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Shopify Accelerator</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Shopify Liquid Themes</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Design Studio</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Intelligence Layer</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between p-space-sm bg-surface-bone hover:bg-surface-stone transition-colors shadow-sm" href="#contact">
+          <span class="font-body-md text-body-md font-medium text-ink-solid">Slash Portal</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-muted">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESTIMATOR ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-lg bg-surface-bone">
+    <div class="mx-auto max-w-narrow w-full flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <span class="font-label-caps text-label-caps uppercase text-ink-muted tracking-widest">Estimator</span>
+        <span class="font-mono-code text-caption text-ink-dim">Rapid Scoping</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm font-semibold text-ink-solid">Estimate your launch stack</h3>
+      <p class="font-body-sm text-body-sm text-ink-muted">Select desired foundation to check engineering timeline:</p>
+      <div class="grid grid-cols-2 gap-2 pt-1" id="stack-selector">
+        <button class="stack-btn active p-3 bg-primary text-on-primary flex flex-col items-start gap-1 text-left transition-colors" data-stack="centra" type="button">
+          <span class="font-mono-code text-caption uppercase">Engine</span>
+          <span class="font-body-md text-body-md font-semibold">Centra Headless</span>
+          <span class="font-mono-code text-[10px] opacity-80">6—10 wks</span>
+        </button>
+        <button class="stack-btn p-3 bg-surface-stone text-ink-solid flex flex-col items-start gap-1 text-left transition-colors" data-stack="shopify" type="button">
+          <span class="font-mono-code text-caption uppercase">Engine</span>
+          <span class="font-body-md text-body-md font-semibold">Shopify Plus</span>
+          <span class="font-mono-code text-[10px] opacity-80">4—8 wks</span>
+        </button>
+      </div>
+      <div class="p-3 bg-surface-container flex items-center justify-between mt-1">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps uppercase text-ink-muted">Standard Velocity</span>
+          <span class="font-body-md text-body-md font-bold text-ink-solid" id="stack-summary">Headless Commerce Architecture</span>
+        </div>
+        <span class="material-symbols-outlined text-ink-solid text-[22px]">rocket_launch</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="flex flex-col w-full px-margin-mobile lg:px-margin py-space-xl bg-primary text-on-primary" id="contact">
+    <div class="mx-auto max-w-content w-full flex flex-col gap-space-lg">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-lg">
+        <div class="flex flex-col gap-space-sm max-w-[560px]">
+          <span class="font-mono-code text-caption text-primary-fixed uppercase tracking-widest">// Inquiries &amp; New Commerce</span>
+          <h2 class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg font-semibold leading-tight text-on-primary">
+            Join us in building the future of digital commerce.
+          </h2>
+        </div>
+        <a class="min-h-[48px] px-space-lg py-space-md bg-on-primary text-primary font-mono-code text-mono-code uppercase font-bold tracking-wider inline-flex items-center justify-center transition-opacity hover:opacity-90 shrink-0" href="mailto:julie@aino.agency">
+          Start a project
+        </a>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-md pt-space-md border-t border-white/10">
+        <div class="flex flex-col gap-1">
+          <span class="font-label-caps text-label-caps uppercase text-primary-fixed tracking-widest">New Business</span>
+          <a class="font-headline-sm text-headline-sm font-medium text-on-primary hover:underline" href="mailto:julie@aino.agency">
+            julie@aino.agency
+          </a>
+          <span class="font-mono-code text-caption text-ink-dim">Gothenburg &amp; Oslo • GBG / OSL</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-space-lg">
+          <div class="flex flex-col gap-2">
+            <span class="font-label-caps text-label-caps uppercase text-ink-dim tracking-wider">Agency</span>
+            <a class="font-mono-code text-caption text-on-primary hover:text-primary-fixed uppercase" href="#">Journal</a>
+            <a class="font-mono-code text-caption text-on-primary hover:text-primary-fixed uppercase" href="#">Careers</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="font-label-caps text-label-caps uppercase text-ink-dim tracking-wider">Social</span>
+            <a class="font-mono-code text-caption text-on-primary hover:text-primary-fixed uppercase" href="https://linkedin.com/company/aino" rel="noopener noreferrer" target="_blank">Linkedin</a>
+            <a class="font-mono-code text-caption text-on-primary hover:text-primary-fixed uppercase" href="https://instagram.com/aino.agency" rel="noopener noreferrer" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full px-margin-mobile lg:px-margin py-space-xl flex flex-col items-center justify-center gap-space-sm bg-surface-bone select-none border-t hairline">
+  <span class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight lowercase text-ink-solid">aino.agency</span>
+  <span class="font-mono-code text-caption uppercase text-ink-muted tracking-widest">Design &amp; Technology // Scandinavia</span>
+  <span class="font-mono-code text-caption text-ink-dim mt-space-sm">© 2025 aino.agency — All rights reserved</span>
+</footer>
+
+<script>
+  (function initAinoMicroInteractions() {
+    const buttons = document.querySelectorAll('.stack-btn');
+    const summaryText = document.getElementById('stack-summary');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-stone', 'text-ink-solid');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-stone', 'text-ink-solid');
+
+        const stackType = btn.getAttribute('data-stack');
+        if (stackType === 'centra') {
+          summaryText.textContent = 'Centra Headless + Next.js Framework';
+        } else {
+          summaryText.textContent = 'Shopify Liquid + Hydrogen Engine';
+        }
+      });
+    });
+  })();
+
+  (function initMobileMenu() {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+
+    function closeMenu() {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      icon.textContent = 'menu';
+    }
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        icon.textContent = 'close';
+      }
+    });
+
+    menu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
+</body>
+</html>
